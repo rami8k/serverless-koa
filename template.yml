@@ -35,7 +35,6 @@ Resources:
       Environment:
         Variables:
           NODE_ENV: production
-          SHOP_NAME: bloomberg-bna-books-demo
       Role:
         Fn::GetAtt:
         - LambdaExecutionRole
