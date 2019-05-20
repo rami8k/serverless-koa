@@ -1,0 +1,23 @@
+{
+  "name": "bbna-shopify-reports-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "dev": "node server",
+    "start": "node server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-serverless-express": "^3.3.6",
+    "isomorphic-fetch": "^2.2.1",
+    "koa": "^2.7.0",
+    "koa-router": "^7.4.0",
+    "koa-session": "^5.10.1",
+    "koa-static": "^5.0.0",
+    "xlsx": "^0.14.2"
+  }
+}
