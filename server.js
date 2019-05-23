@@ -48,7 +48,4 @@ function createServer() {
 }
 
 const server = createServer();
-
-    server.listen(port, () => {
-      console.log(`> Ready on http://localhost:${port}`);
-    });
+module.exports = server;
