@@ -4,8 +4,6 @@ const Router = require('koa-router');
 const session = require('koa-session');
 const xlsx = require('xlsx');
 
-const port = parseInt(process.env.PORT, 10) || 3000;
-
 function createServer() {
   const server = new Koa();
   var router = Router();
@@ -75,4 +73,12 @@ function createServer() {
 }
 
 const server = createServer();
-module.exports = server;
+
+if(process.env.NODE_ENV === 'dev') {
+  const port = parseInt(process.env.PORT, 10) || 3000;
+  app.listen(port, () => {
+    console.log(`> Ready on http://localhost:${port}`);
+  });
+} else {
+  module.exports = server;
+}
