@@ -62,7 +62,6 @@ function createServer() {
   })
 
   router.get('*', async (ctx, next) => {
-    await handle(ctx.req, ctx.res);
     ctx.res.statusCode = 200
     await next()
   })
@@ -76,7 +75,7 @@ const server = createServer();
 
 if(process.env.NODE_ENV === 'dev') {
   const port = parseInt(process.env.PORT, 10) || 3000;
-  app.listen(port, () => {
+  server.listen(port, () => {
     console.log(`> Ready on http://localhost:${port}`);
   });
 } else {
